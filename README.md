@@ -175,6 +175,18 @@ The project follows these principles:
 4. **Type Safety**: Uses Pydantic for data validation
 5. **Async Support**: FastAPI with async endpoints for better performance
 
+## TODO
+
+### High Priority
+- [ ] Fix SentenceTransformerEmbedder api_key parameter error in rag_service.py
+
+### Medium Priority  
+- [ ] Test Streamlit frontend functionality at http://localhost:8501
+- [ ] Verify that documents in data/documents/ are being ingested correctly
+
+### Low Priority
+- [ ] Create .env.example file with proper template variables
+
 ## Future Enhancements
 
 While this is a proof-of-concept with local storage, the architecture supports easy migration to:
