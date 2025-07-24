@@ -14,7 +14,9 @@
       "Bash(rm:*)",
       "Bash(pip install:*)",
       "Bash(ruff check:*)",
-      "Bash(.venv/bin/python:*)"
+      "Bash(.venv/bin/python:*)",
+      "Bash(.venv/bin/pip install:*)",
+      "Bash(~/.local/bin/uv pip install:*)"
     ],
     "deny": []
   }

@@ -32,9 +32,7 @@ class Settings(BaseSettings):
     auto_ingest_on_startup: bool = True
     auto_ingest_directory: str = "/app/data/documents"
     
-    class Config:
-        env_file = ".env"
-        case_sensitive = False
+    model_config = {"env_file": ".env", "case_sensitive": False}
 
 
 settings = Settings()
