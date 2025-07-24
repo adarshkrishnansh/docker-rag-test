@@ -18,7 +18,11 @@
       "Bash(.venv/bin/pip install:*)",
       "Bash(~/.local/bin/uv pip install:*)",
       "Bash(~/.local/bin/uv run ruff check:*)",
-      "Bash(~/.local/bin/uv run pytest:*)"
+      "Bash(~/.local/bin/uv run pytest:*)",
+      "Bash(chmod:*)",
+      "Bash(docker-compose build:*)",
+      "Bash(docker compose:*)",
+      "Bash(docker:*)"
     ],
     "deny": []
   }
