@@ -1,9 +1,8 @@
-from typing import List, Optional, Union
+from typing import List, Optional
 import os
 from abc import ABC, abstractmethod
 import numpy as np
 from sentence_transformers import SentenceTransformer
-import openai
 from openai import OpenAI
 from tenacity import retry, stop_after_attempt, wait_exponential
 

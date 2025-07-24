@@ -1,4 +1,4 @@
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Optional
 import os
 import chromadb
 from chromadb.config import Settings
@@ -49,7 +49,7 @@ class ChromaVectorStore:
                 name=self.collection_name,
                 embedding_function=self.embedding_function
             )
-        except:
+        except ValueError:
             self.collection = self.client.create_collection(
                 name=self.collection_name,
                 embedding_function=self.embedding_function,

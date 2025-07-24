@@ -32,7 +32,7 @@ Your documents will be automatically processed and ready for search and chat!
 ### Prerequisites
 
 - Docker and Docker Compose
-- Python 3.11+ (for local development)
+- Python 3.12+ (for local development)
 - OpenAI API key (optional, for chat functionality)
 
 ### Using Docker (Recommended)

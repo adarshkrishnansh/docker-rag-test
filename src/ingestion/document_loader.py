@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 from typing import List, Dict, Any
 from dataclasses import dataclass
@@ -6,7 +5,6 @@ import chardet
 from pypdf import PdfReader
 from docx import Document as DocxDocument
 from bs4 import BeautifulSoup
-import markdown
 
 
 @dataclass

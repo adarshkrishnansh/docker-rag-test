@@ -1,5 +1,4 @@
 from typing import List, Optional, Dict, Any
-import os
 from openai import OpenAI
 from src.storage.vector_store import ChromaVectorStore, SearchResult
 from src.embedding.embedder import EmbedderFactory

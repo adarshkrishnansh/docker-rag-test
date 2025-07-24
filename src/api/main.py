@@ -1,18 +1,16 @@
-from fastapi import FastAPI, HTTPException, UploadFile, File, Form
+from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import logging
 import os
 from typing import List
 import tempfile
-import shutil
 
 from src.api.models import (
     QueryRequest, QueryResponse, QueryResult,
     ChatRequest, ChatResponse,
     HealthResponse,
-    IngestRequest, IngestResponse,
-    DocumentUpload, DocumentResponse
+    IngestRequest, IngestResponse
 )
 from src.api.rag_service import RAGService
 from src.api.config import settings
