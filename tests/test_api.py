@@ -1,8 +1,7 @@
 import pytest
 from fastapi.testclient import TestClient
-from unittest.mock import patch, Mock, MagicMock
+from unittest.mock import patch, Mock
 import tempfile
-import os
 from pathlib import Path
 from src.api.main import app
 
@@ -23,6 +22,7 @@ def mock_rag_service():
 @pytest.fixture
 def temp_file():
     """Create a temporary file for upload tests"""
+    import os
     with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False) as f:
         f.write("Test file content")
         temp_path = f.name
@@ -316,7 +316,6 @@ def test_cors_headers(client, mock_rag_service):
 async def test_startup_auto_ingest():
     """Test auto-ingestion on startup"""
     import tempfile
-    import os
     
     with tempfile.TemporaryDirectory() as temp_dir:
         # Create a test document

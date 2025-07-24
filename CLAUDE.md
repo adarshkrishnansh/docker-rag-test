@@ -38,13 +38,14 @@ docker-rag-test/
 
 ## Development Commands
 
-As the project is in initial stages, these commands will need to be implemented:
-- **Install dependencies**: `pip install -r requirements.txt` (once created)
-- **Run tests**: `pytest` (after test framework setup)
-- **Run linting**: `flake8` or `ruff` (to be configured)
-- **Run type checking**: `mypy` (to be configured)
-- **Build Docker image**: `docker build -t docker-rag-test .` (once Dockerfile exists)
-- **Run locally**: `docker-compose up` (once docker-compose.yml exists)
+**IMPORTANT: Always use `uv pip install` for package management to get latest compatible versions**
+
+- **Install dependencies**: `uv pip install -r requirements.txt`
+- **Run tests**: `pytest`
+- **Run linting**: `ruff check src/ tests/`
+- **Run type checking**: `mypy src/`
+- **Build Docker image**: `docker build -t docker-rag-test .`
+- **Run locally**: `docker-compose up --build`
 
 ## Technology Stack
 

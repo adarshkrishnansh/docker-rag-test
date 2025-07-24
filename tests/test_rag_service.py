@@ -1,7 +1,7 @@
 import pytest
 import tempfile
 import shutil
-from unittest.mock import Mock, patch, MagicMock
+from unittest.mock import Mock, patch
 from pathlib import Path
 from src.api.rag_service import RAGService
 from src.api.config import settings
@@ -125,7 +125,7 @@ def test_ingest_documents_with_openai_embeddings(mock_rag_service, temp_dir):
     
     # Test with OpenAI embeddings
     with patch.object(settings, 'embedder_type', 'openai'):
-        result = service.ingest_documents(temp_dir)
+        service.ingest_documents(temp_dir)
     
     # Verify OpenAI embedding path was used
     service._mock_embedder.embed_texts.assert_called_once()
@@ -183,7 +183,7 @@ def test_search_with_openai_embeddings(mock_rag_service):
     
     # Test search
     with patch.object(settings, 'embedder_type', 'openai'):
-        results = service.search("test query", k=3)
+        service.search("test query", k=3)
     
     # Verify
     service._mock_embedder.embed_query.assert_called_once_with("test query")

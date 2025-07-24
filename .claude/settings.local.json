@@ -16,7 +16,9 @@
       "Bash(ruff check:*)",
       "Bash(.venv/bin/python:*)",
       "Bash(.venv/bin/pip install:*)",
-      "Bash(~/.local/bin/uv pip install:*)"
+      "Bash(~/.local/bin/uv pip install:*)",
+      "Bash(~/.local/bin/uv run ruff check:*)",
+      "Bash(~/.local/bin/uv run pytest:*)"
     ],
     "deny": []
   }

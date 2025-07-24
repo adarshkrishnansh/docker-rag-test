@@ -1,6 +1,5 @@
 import pytest
 import tempfile
-import os
 from pathlib import Path
 from src.ingestion.document_loader import DocumentLoader, Document
 
